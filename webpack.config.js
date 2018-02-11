@@ -3,7 +3,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
-        path: './dist'
+        // path: './dist' // 这种写法在linux会找不到路径
+        path: path.join(__dirname, '/dist')
     },
     module: {
         rules: [
